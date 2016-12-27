@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="green_40">#218200</color>
+    <color name="green_50">#24a300</color>
+    <color name="green_60">#51B533</color>
+    <color name="green_70">#7DC766</color>
+    <color name="green_80">#a8da99</color>
 </resources>

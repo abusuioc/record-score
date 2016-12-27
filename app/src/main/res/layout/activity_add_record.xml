@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/add_activity_add_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="busu.recordscore.AddRecord">
+
+        <include
+            android:id="@+id/add_table"
+            layout="@layout/include_spinner" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Team 1" />
+
+            <include
+                android:id="@+id/add_team1_keeper"
+                layout="@layout/include_spinner" />
+
+            <include
+                android:id="@+id/add_team1_attacker"
+                layout="@layout/include_spinner" />
+
+            <include
+                android:id="@+id/add_team1_score"
+                layout="@layout/include_score" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Team 2" />
+
+            <include
+                android:id="@+id/add_team2_keeper"
+                layout="@layout/include_spinner" />
+
+            <include
+                android:id="@+id/add_team2_attacker"
+                layout="@layout/include_spinner" />
+
+            <include
+                android:id="@+id/add_team2_score"
+                layout="@layout/include_score" />
+
+
+        </LinearLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/add_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/button_background_green"
+            android:text="Add" />
+
+    </LinearLayout>
+</ScrollView>
