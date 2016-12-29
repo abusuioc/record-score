@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context="busu.recordscore.AddRecord">
+        tools:context="busu.recordscore.ui.AddRecordActivity">
 
         <include
             android:id="@+id/add_table"

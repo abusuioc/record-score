@@ -1,21 +1,36 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.siimkinks.sqlitemagic'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
     defaultConfig {
         applicationId "busu.recordscore"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "int", "DB_VERSION", "1"
+        buildConfigField "String", "DB_NAME", '"default.db"'
+
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
+            buildConfigField "String", "DB_NAME", '"release.db"'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            buildConfigField "String", "DB_NAME", '"debug.db"'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -23,8 +38,15 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs', module: 'jsr305'
     })
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'com.android.support:design:25.0.1'
     testCompile 'junit:junit:4.12'
+    provided 'com.google.auto.value:auto-value:1.2-rc1'
+    apt 'com.google.auto.value:auto-value:1.2-rc1'
+    compile 'com.jakewharton.rxbinding:rxbinding:1.0.0'
+    compile 'com.trello:rxlifecycle-android:1.0'
+    compile 'com.trello:rxlifecycle-components:1.0'
+    compile 'com.github.veritas1:vertical-slide-color-picker:1.0.0'
 }

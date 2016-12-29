@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:colorpicker="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/dialog_tables_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:hint="@string/dialog_tables_hint_name" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="right"
+                android:text="@string/dialog_tables_team1_color" />
+
+            <ImageView
+                android:id="@+id/dialog_tables_team1_player"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:src="@drawable/f_player" />
+
+
+        </LinearLayout>
+
+
+        <com.github.veritas1.verticalslidecolorpicker.VerticalSlideColorPicker
+            android:id="@+id/dialog_tables_team1_cp"
+            android:layout_width="30dp"
+            android:layout_height="200dp"
+            colorpicker:borderColor="@android:color/black"
+            colorpicker:borderWidth="2dp" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="right"
+                android:text="@string/dialog_tables_team2_color" />
+
+            <ImageView
+                android:id="@+id/dialog_tables_team2_player"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:src="@drawable/f_player" />
+
+
+        </LinearLayout>
+
+        <com.github.veritas1.verticalslidecolorpicker.VerticalSlideColorPicker
+            android:id="@+id/dialog_tables_team2_cp"
+            android:layout_width="30dp"
+            android:layout_height="200dp"
+            colorpicker:borderColor="@android:color/black"
+            colorpicker:borderWidth="2dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dialog_tables_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_background_green"
+        android:enabled="false"
+        android:text="@string/dialog_tables_add"
+        android:textStyle="normal" />
+
+</LinearLayout>

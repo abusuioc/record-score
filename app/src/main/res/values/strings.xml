@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">RecordScore</string>
     <string name="action_settings">Settings</string>
+    <string name="dialog_tables_hint_name">Enter the table\'s name</string>
+    <string name="dialog_tables_team1_color">Team1\ncolor:</string>
+    <string name="dialog_tables_team2_color">Team2\ncolor:</string>
+    <string name="dialog_tables_title">New playing table</string>
+    <string name="dialog_tables_add">Add this table</string>
+
 </resources>
